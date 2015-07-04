@@ -8,6 +8,11 @@
   <div style='border: 4px dashed red'>
     <img src='http://www.sinatrarb.com/images/logo.png'>
   </div>
-  <p>Your musketeer for the day is <%= @random_name %></p>
+  <% if @visitor %>
+    <p>Hello, <%= @visitor %></p>
+  <% end %>
+  <% if @random_name %>
+    <p>Your musketeer for the day is <%= @random_name %></p>
+  <% end %>
 </body>
 </html>

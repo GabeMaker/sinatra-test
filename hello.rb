@@ -5,6 +5,11 @@ get '/' do
   erb :index
 end
 
+get '/hello' do
+  @visitor = params[:name].capitalize + " " + params[:last_name].capitalize
+  erb :index
+end
+
 get '/secret' do
   erb :secret
 end
