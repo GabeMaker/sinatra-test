@@ -6,7 +6,7 @@ get '/' do
 end
 
 get '/hello' do
-  @visitor = params[:name].capitalize + " " + params[:last_name].capitalize
+  @visitor = params[:name].capitalize
   erb :index
 end
 

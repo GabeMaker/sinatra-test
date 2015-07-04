@@ -9,10 +9,13 @@
     <img src='http://www.sinatrarb.com/images/logo.png'>
   </div>
   <% if @visitor %>
-    <p>Hello, <%= @visitor %></p>
-  <% end %>
-  <% if @random_name %>
-    <p>Your musketeer for the day is <%= @random_name %></p>
+    <p>Hello, <%= @visitor %>!</p>
+  <% else %>
+    <form action="/hello">
+      <p>My hat is called <%= @random_name %>. What is your name?</p>
+      <input type="text" name="name" />
+      <input type="submit" Value="That's my name!" />
+    </form>
   <% end %>
 </body>
 </html>
