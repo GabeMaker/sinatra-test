@@ -1,7 +1,17 @@
 require 'sinatra'
 
 get '/' do
-  'hello!'
+  "
+  <head>
+    <title>Sinatra Test</title
+  </head>
+  <body>
+    <h1>Sinatra Test</h1>
+    <div>
+      <img src='http://www.sinatrarb.com/images/logo.png'>
+    </div>
+  </body>
+  "
 end
 
 get '/secret' do
