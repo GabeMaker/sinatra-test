@@ -6,8 +6,16 @@
 <body>
   <h1>Sinatra Test Page</h1>
   <div>
-    <img src='http://sinatra.rubyforge.org/logo.png' />
+    <img src='/images/sinatra_logo.png' />
   </div>
-  <p>Hello <%= @name %>! How is <%= @place %>?</p>
+  <% if @name %>
+    <p>Hello <%= @name %>!</p>
+  <% else %>
+    Hi, I'm <%= @host %> What's your name?
+    <form action="/hello">
+      <input type="text" name="name" />
+      <input type="submit" value="Submit" />
+    </form>
+  <% end %>
 </body>
 </html>

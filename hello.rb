@@ -1,11 +1,11 @@
 require 'sinatra'
 
 get '/' do
-  @name = params[:name].capitalize
-  @place = params[:place].capitalize
+  @host = ["Adam", "Ben", "Chris"].sample
   erb :index
 end
 
-get '/secret' do
-  "Secret Page"
+get '/hello' do
+  @name = params[:name].capitalize
+  erb :index
 end
